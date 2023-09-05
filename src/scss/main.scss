@@ -1,0 +1,36 @@
+:root {
+  --light-gray: #DBE5FF;
+  --dark-blue: #052C54;
+  --purple: #5325EA;
+  --dark-grey: #7C89A0;
+  --dark-grey-secondary: #7E7E7E;
+  --white: #FFFFFF;
+  --white-secondary: #F4F7FF;
+  --black: #000000;
+}
+
+[data-theme="dark"] {
+  --light-gray: #070708;
+  --dark-blue: #0671dd;
+  --purple: #5325EA;
+  --dark-grey: #7C89A0;
+  --dark-grey-secondary: #7E7E7E;
+  --white: #010101;
+  --white-secondary: #222224;
+  --black: #000000;
+}
+
+
+body {
+  &.light {
+    color-scheme: light;
+    color: rgba(255, 255, 255, 0.87);
+    background-color: #FFFFFF;
+  }
+
+  &.dark {
+    color-scheme: dark;
+    color: rgba(255, 255, 255, 0.87);
+    background-color: #000000;
+  }
+}

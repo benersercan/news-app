@@ -1,0 +1,45 @@
+.skeleton {
+  background: #f0f0f0;
+  border-radius: 4px;
+  margin: 20px 0;
+  padding: 20px;
+}
+
+.skeleton-image {
+  background: #ddd;
+  height: 200px;
+  width: 100%;
+}
+
+.skeleton-title {
+  background: #ddd;
+  height: 20px;
+  margin: 20px 0;
+  width: 60%;
+}
+
+.skeleton-description {
+  background: #ddd;
+  height: 15px;
+  margin-bottom: 10px;
+  width: 80%;
+}
+
+.swiper-skeleton {
+  .skeleton-image {
+    height: 400px; // Swiper'ın daha büyük bir görsel gösterdiğini varsayıyoruz
+    width: 100%;
+  }
+
+  .skeleton-title {
+    height: 25px;
+    margin: 20px 0;
+    width: 70%;
+  }
+
+  .skeleton-description {
+    height: 20px;
+    margin-bottom: 10px;
+    width: 85%;
+  }
+}

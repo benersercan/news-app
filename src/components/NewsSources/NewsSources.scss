@@ -1,0 +1,25 @@
+.news-container {
+  .news-wrapper{
+    padding: 30px 12px;
+    border-top: 1px solid #DBE5FF;
+    .news-link {
+      text-decoration: none;
+    }
+  }
+}
+
+@media (min-width: 768px) { 
+  .news-container {
+    padding: 30px 0px;
+    max-width: 95%;
+    margin: auto;
+  }
+}
+
+@media (min-width: 1140px) { 
+  .news-container {
+    padding: 30px 0px;
+    max-width: 90%;
+    margin: auto;
+  }
+}

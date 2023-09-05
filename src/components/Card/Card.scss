@@ -1,0 +1,32 @@
+@import "@styles/variables";
+.card {
+  display: flex;
+  padding: 15px 0px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  align-self: stretch;
+  border-radius: 5px;
+  border-bottom: 1px dashed var(--light-gray);
+
+  .card-content {
+    .card-title {
+      margin: 0;
+      font-size: 1.25rem;
+      margin-bottom: 0.5rem;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      color: $purple;
+    }
+
+    .card-description {
+      color: var(--dark-grey);
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+  }
+}
