@@ -16,7 +16,6 @@ import 'swiper/css/pagination';
 import plusIcon from '../../assets/plus-icon.svg';
 import removeIcon from '../../assets/icon-remove.svg';
 
-
 export const NewsList = () => {
   const { searchTerm } = useParams();
   const navigate = useNavigate();
@@ -28,7 +27,6 @@ export const NewsList = () => {
   const [showModal, setShowModal] = useState(true);
   const [autoRefresh, setAutoRefresh] = useState(false);
   const { addToReadingList, removeFromReadingList, isInReadingList } = useReadingList();
-
 
   /**
    * Merges old articles with new ones, ensuring no duplicates.
@@ -80,7 +78,7 @@ export const NewsList = () => {
     if (autoRefresh) {
       const interval = setInterval(() => {
         fetchNews();
-      }, 51 * 60 * 1000);
+      }, 1 * 60 * 1000); // 1min
       return () => clearInterval(interval);
     }
   }, [autoRefresh, fetchNews]);

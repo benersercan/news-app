@@ -5,7 +5,7 @@ const NewsContext = createContext();
 
 export const useNews = () => {
   if(!NewsContext.Provider) {
-    throw("useNews can only be used within NextContext Provider.")
+    throw("useNews can only be used within NewsContext Provider.")
   }
 
     return useContext(NewsContext);

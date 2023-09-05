@@ -82,17 +82,20 @@ Use this component when the user chooses to view a news article in detail. It al
 ## ReadingList Component
 
 ### Features:
--   A component that displays news in the user's reading list.
--   If there are no news articles in the user's reading list, a blank screen with a button directing to the home page is shown.
+-  A component that displays the articles in the user's reading list.
+If the user's reading list has no articles, an empty state screen with a button to navigate back to the homepage is displayed.
+Used Components and Modules:
 
 **Used Components and Modules:**
--   useNavigate: Used for page navigation functionality.
--   Layout: The main component that forms the general template of the application.
--   ArticleItem: Used to display each news item in the reading list.
--   FaFrown: The sad face icon displayed when the reading list is empty.
+-   useNavigate: A hook from the react-router-dom package. It provides routing functionality.
+-   useState, useEffect: Built-in hooks of React. They are used for state management and side effects.
+-   PropTypes: Used for validating prop types.
+-   Layout: An external component that forms the framework for this component.
+-   FaFrown: An icon taken from the react-icons/fa package. It's displayed when the reading list is empty.
+-   localStorageKeys: A constant containing keys for local storage.
 
 **Usage:**
-Use this component to review the user's reading list. If the list is empty, the user is presented with a message and an option to return to the home page.
+This component is used to review the user's reading list. If the list is empty, a message is shown to the user along with an option to return to the homepage.
 
 
 ## ArticleItem Component
@@ -159,3 +162,22 @@ This component introduces a news source in the form of a visual card.
 -   source: (object, required) Contains information about the news source.
 -   name: (string, required) Contains the source's name.
 -   description: (string) Contains a brief description of the source.
+
+
+## useReadingList Hook
+## Definition:
+The useReadingList is a custom hook designed to manage a user's reading list. This hook offers helper functions to retrieve articles from the reading list, add an article, remove an article, and check if an article is present in the reading list.
+
+### Usage:
+By using this custom hook, you can effortlessly perform operations related to the user's reading list within the application.
+
+### Functions and Return Values:
+- readingList: An array containing the user's reading list.
+- addToReadingList(article): Adds the given article object to the reading list and updates this list in local storage.
+
+- Parameter: article - The article object to be added to the reading list.
+removeFromReadingList(articleUrl): Removes the article with the given articleUrl from the reading list and updates this list in local storage.
+- Parameter: articleUrl - The URL of the article to be removed from the reading list.
+isInReadingList(articleUrl): Checks whether an article with the given articleUrl exists in the reading list.
+- Parameter: articleUrl - The URL of the article to be checked.
+Return Value: true if the article is in the reading list, false otherwise.

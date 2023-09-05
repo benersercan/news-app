@@ -18,7 +18,7 @@ Run the `npm install` command.
 
 To run the application on a local server:
 
-Use the `npm run dev` command. By default, it will run on [http://localhost:3000](http://localhost:3000/).
+Use the `npm run dev` command. By default, it will run on [http://localhost:3000]
 
 ## Building the Application
 

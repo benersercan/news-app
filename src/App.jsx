@@ -41,7 +41,7 @@ function App() {
             title="Error"
           >
             {modalMessage}
-        </CustomModal>
+          </CustomModal>
       </Router>
     </NewsProvider>
   );

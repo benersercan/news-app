@@ -12,12 +12,12 @@
       .swiper-slide {
         display: flex;
         flex-direction: column;
-        justify-content: center; // İçeriği dikeyde ortala
-        height: 100%; // Tam yükseklik
+        justify-content: center;
+        height: 100%;
 
         &__image {
           width: 100%;
-          height: 50%; // İsteğe bağlı olarak ayarlanabilir
+          height: 50%;
           object-fit: cover;
           border-radius: 10px;
         }
@@ -28,7 +28,7 @@
           font-style: normal;
           font-weight: 700;
           line-height: normal;
-          margin-top: 15px; // Resimle arasında boşluk
+          margin-top: 15px;
         }
 
         p {

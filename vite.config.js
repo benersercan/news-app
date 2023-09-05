@@ -7,13 +7,13 @@ export default defineConfig({
   server: {
     port: 3000,
   },
-  proxy: {
-    '/api': {
-      target: 'https://newsapi.org/v2',
-      changeOrigin: true,
-      rewrite: path => path.replace(/^\/api/, '')
-    }
-  },
+  // proxy: {
+  //   '/api': {
+  //     target: 'https://newsapi.org/v2',
+  //     changeOrigin: true,
+  //     rewrite: path => path.replace(/^\/api/, '')
+  //   }
+  // },
   resolve: {
     alias: {
       '@components': '/src/components',

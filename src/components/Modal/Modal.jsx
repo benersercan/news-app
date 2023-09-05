@@ -5,7 +5,7 @@ const Modal = ({ onConfirm, onCancel }) => {
 
   /*
   *
-  *I wasn't sure if the user should be asked or given this experience
+  * I wasn't sure if the user should be asked or given this experience
   */
   return (
     <div className="modal-confirm">

@@ -2,15 +2,8 @@ import { useState } from 'react';
 import PropTypes from 'prop-types';
 import'./CustomModal.scss'
 
-// eslint-disable-next-line no-unused-vars
-let modalVisible = false;
-// eslint-disable-next-line no-unused-vars
-let modalMessage = "";
-
 export const CustomModal = ({ show, onClose, title, children }) => {
   const handleClose = () => {
-    modalVisible = false;
-    modalMessage = "";
     if (onClose) onClose();
   };
 
@@ -27,11 +20,6 @@ export const CustomModal = ({ show, onClose, title, children }) => {
       </div>
     </div>
   );
-};
-
-CustomModal.showError = (message) => {
-  modalVisible = true;
-  modalMessage = message;
 };
 
 CustomModal.propTypes = {

@@ -81,16 +81,17 @@ Bu komponent, kullanıcının bir haber makalesini detaylı olarak incelemek iç
 ## Okuma Listesi Ekranı
 
 ## ReadingList Komponenti
-
 ### Özellikler:
 -   Kullanıcının okuma listesindeki haberleri gösteren bir komponenttir.
 -   Eğer kullanıcının okuma listesinde hiç haber yoksa, ana sayfaya yönlendirme yapabilecek bir butonla boş bir durum ekranı gösterilir.
 
 **Kullanılan Komponentler ve Modüller:**
--   useNavigate: Sayfa yönlendirme işlevselliği için kullanılır.
--   Layout: Uygulamanın genel şablonunu oluşturan ana komponenttir.
--   ArticleItem: Okuma listesindeki her bir haber öğesini göstermek için kullanılır.
--   FaFrown: Okuma listesinin boş olduğunda gösterilen üzgün yüz simgesidir.
+-  useNavigate: react-router-dom paketinden alınan bir kancadır. Yönlendirme işlevi sağlar.
+-  useState, useEffect: React'ın yerleşik kancalarıdır. Durum yönetimi ve yan etki işlevleri için kullanılır.
+-  PropTypes: Prop tiplerini doğrulamak için kullanılır.
+-  Layout: Dış bir bileşendir ve bu bileşenin çerçevesini oluşturur.
+-  FaFrown: react-icons/fa paketinden alınan bir ikondur. Okuma listesi boş olduğunda gösterilir.
+-  localStorageKeys: Yerel depolama için anahtarları içeren bir sabittir.
 
 **Kullanım:**
 Bu komponent, kullanıcının okuma listesini incelemek için kullanılır. Liste boşsa, kullanıcıya bir mesaj ve ana sayfaya dönme seçeneği sunulur.
@@ -117,7 +118,6 @@ Bu komponent, kullanıcının okuma listesini incelemek için kullanılır. List
 
 **Kullanım:**
 Bu komponent, haber listesi içinde her bir haber öğesini göstermek için kullanılır. Her öğe, kullanıcının tıklamasına tepki olarak ayrıntı sayfasına yönlendirme yapar.
-
 
 
 ### CustomModal Komponenti
@@ -151,7 +151,6 @@ Bu komponent, haber kategorilerini filtrelemek için kullanılır. Kullanıcı, 
 -   API dökümanına göre uygun kategorileri gösterir
 -   İlgili kategori filtrelemesini uygulamak için Apply adında bir button içerir
 
-
 ## Card Bileşeni
 
 ## Tanım:
@@ -161,3 +160,22 @@ Bu komponent, bir haber kaynağını görsel bir kart olarak sunar.
 - source: (object, required) Haber kaynağının bilgilerini içeren obje.
 - name: (string, required) Kaynağın adını içerir.
 - description: (string) Kaynağın kısa bir açıklamasını içerir.
+
+
+## useReadingList Hook
+## Tanım:
+useReadingList isimli bu özel kanca, bir kullanıcının okuma listesini yönetmek için kullanılır. Bu kanca, kullanıcının okuma listesindeki makaleleri almak, bir makale eklemek, bir makaleyi kaldırmak ve bir makalenin okuma listesinde olup olmadığını kontrol etmek için yardımcı işlevler sağlar.
+
+### Kullanım:
+Bu özel kancayı kullanarak, uygulama içerisinde kullanıcının okuma listesiyle ilgili işlemleri kolaylıkla gerçekleştirebilirsiniz.
+
+### İşlevler ve Dönüş Değerleri:
+- readingList: Kullanıcının okuma listesini içeren array
+- addToReadingList(article): Verilen article nesnesini okuma listesine ekler ve bu listeyi yerel depolamada günceller.
+
+- Parametre: article - Okuma listesine eklenecek makale nesnesi.
+removeFromReadingList(articleUrl): Verilen articleUrl'ye sahip makaleyi okuma listesinden kaldırır ve bu listeyi yerel depolamada günceller.
+- Parametre: articleUrl - Okuma listesinden kaldırılacak makalenin URL'si.
+isInReadingList(articleUrl): Verilen articleUrl'ye sahip bir makalenin okuma listesinde olup olmadığını kontrol eder.
+- Parametre: articleUrl - Kontrol edilecek makalenin URL'si.
+Dönüş Değeri: true eğer makale okuma listesindeyse, false eğer değilse.

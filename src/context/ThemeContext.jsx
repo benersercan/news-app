@@ -18,7 +18,7 @@ export const ThemeProvider = ({ children }) => {
 
 export const useTheme = () => {
   if(!ThemeContext.Provider) {
-    throw("useNews can only be used within NextContext Provider.")
+    throw("useTheme can only be used within ThemeContext Provider.")
   }
   return useContext(ThemeContext);
 };
